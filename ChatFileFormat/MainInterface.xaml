@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfApplication1.MainInterface"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="800" Width="1000">
+    <Grid Height="772.191" Background="RoyalBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*" />
+            <ColumnDefinition Width="757*" />
+        </Grid.ColumnDefinitions>
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,211.582,0,0" Name="label1" VerticalAlignment="Top" Width="104.958" Grid.ColumnSpan="2">Date:</Label>
+        <TextBox Height="25" Margin="96.885,211.582,0,0" Name="dateBox" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="263.903" />
+        <Label HorizontalAlignment="Left" Margin="12,247.401,0,0" Name="label2" Width="104.958" Grid.ColumnSpan="2" Height="24.941" VerticalAlignment="Top">Main Locations:</Label>
+        <TextBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
+            Margin="0,362.355,12,53.312" Name="mainTextBox" Background="Ivory" HorizontalAlignment="Right" Width="953.505" Grid.ColumnSpan="2" />
+        <TextBox Height="25" IsReadOnly="True" Margin="0,77.97,-136.612,0" Name="textBox4" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Right" Width="117.453" />
+        <TextBox Height="25" IsReadOnly="True" Margin="0,0,-157.437,479.03" Name="textBox5" VerticalAlignment="Bottom" Grid.Column="1" HorizontalAlignment="Right" Width="117.256" />
+        <TextBox Height="25" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,125.783,-157.437,0" Name="textBox6" VerticalAlignment="Top" Width="117.256" Grid.Column="1" />
+        <TextBox Height="25" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,94.962,-147.441,0" Name="textBox7" VerticalAlignment="Top" Width="117.256" Grid.Column="1" />
+        <Grid Background="RoyalBlue" Grid.ColumnSpan="2" Height="175.763" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="26.656*" />
+                <ColumnDefinition Width="396.508*" />
+                <ColumnDefinition Width="554.834*" />
+            </Grid.ColumnDefinitions>
+            <Button Click="OpenDialog" Height="23" Margin="26.656,6,0,0" Name="button1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="111.622" Grid.ColumnSpan="2">File</Button>
+            <Label Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="0.823,40.817,0,0" Name="label9" VerticalAlignment="Top" Width="90">FB'sName?</Label>
+            <Label Grid.Column="1" Height="25" HorizontalAlignment="Left" Margin="0.823,71.638,0,0" Name="label10" Width="90.6" VerticalAlignment="Top">CB'sName</Label>
+            <Label Grid.Column="1" HorizontalAlignment="Left" Margin="1.666,102.459,0,0" Name="label11" Width="90" Height="25" VerticalAlignment="Top">CP'sName</Label>
+            <TextBox Grid.Column="2" Height="25" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,77.97,-136.612,0" Name="textBox13" VerticalAlignment="Top" Width="117.453" />
+            <TextBox Grid.Column="2" Height="25" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,0,-157.437,479.03" Name="textBox14" VerticalAlignment="Bottom" Width="117.256" />
+            <TextBox Grid.Column="2" Height="25" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,125.783,-157.437,0" Name="textBox15" VerticalAlignment="Top" Width="117.256" />
+            <Label Grid.Column="1" HorizontalAlignment="Left" Margin="1.666,0,0,15.351" Name="label12" Width="90" Height="25" VerticalAlignment="Bottom">MG'sName</Label>
+            <TextBox Grid.Column="2" Height="25" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,94.962,-147.441,0" Name="textBox16" VerticalAlignment="Top" Width="117.256" />
+            <TextBox Grid.Column="1" Height="25" Margin="96.628,40.817,150.773,0" Name="personOne" VerticalAlignment="Top" TextChanged="personOne_TextChanged">Kai_Tukov</TextBox>
+            <TextBox Grid.Column="1" Height="25" Margin="97.461,71.638,150.773,0" Name="personTwo" VerticalAlignment="Top">YaraSherred</TextBox>
+            <TextBox Margin="97.461,102.529,150.773,0" Name="personThree" Grid.Column="1" Height="25" VerticalAlignment="Top">DamianStark</TextBox>
+            <TextBox Margin="97.461,135.412,150.773,0" Name="personFour" Grid.Column="1" Height="25" VerticalAlignment="Top">Guylian</TextBox>
+            <ComboBox Height="25" Margin="0,39.151,24.99,0" Name="comboBox1" VerticalAlignment="Top" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Right" Width="119.999" />
+            <ComboBox Height="25" Margin="0,70.805,24.157,0" Name="comboBox2" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Right" Width="119.999" VerticalAlignment="Top" />
+            <ComboBox Height="25" Margin="0,101.696,24.99,0" Name="comboBox3" VerticalAlignment="Top" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Right" Width="119.999" />
+            <ComboBox Margin="0,135,24.99,0" Name="comboBox4" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Right" Width="119.999" Height="25" VerticalAlignment="Top" />
+            <GroupBox Grid.Column="1" Header="Story Teller" Margin="378.182,27.499,0,0" Name="groupBox1" Height="143.276" VerticalAlignment="Top" HorizontalAlignment="Left" Width="275.723" Grid.ColumnSpan="2">
+                <Grid>
+                    <RadioButton Height="13.042" Margin="5.5,6,62.223,0" Name="STOne" VerticalAlignment="Top" Checked="STAll_Checked">Story Teller?</RadioButton>
+                    <RadioButton Height="16" Margin="5.5,35.862,62.223,0" Name="STTwo" VerticalAlignment="Top" Checked="STAll_Checked">Story Teller?</RadioButton>
+                    <RadioButton Margin="5.75,66.754,61.723,0" Name="STThree" Height="17.276" VerticalAlignment="Top" Checked="STAll_Checked">Story Teller?</RadioButton>
+                    <RadioButton Margin="5.5,97.575,61.973,0" Name="STFour" IsEnabled="False" Height="16" VerticalAlignment="Top">Story Teller?</RadioButton>
+                </Grid>
+            </GroupBox>
+            <TextBlock Height="21" Margin="117.453,6,297.381,0" Name="fileNameBox" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Background="WhiteSmoke" />
+            <Label Height="25" Margin="263.228,7.361,241.57,0" Name="label7" VerticalAlignment="Top" Grid.Column="2">NPC</Label>
+            <TextBox Height="25" Margin="0,7.361,116.62,0" Name="npcBox" VerticalAlignment="Top" Grid.Column="2" HorizontalAlignment="Right" Width="118.624"></TextBox>
+            <ListBox Margin="263.228,39.984,12,6" Name="npcListBox" Grid.Column="2" />
+            <Button Height="25" HorizontalAlignment="Right" Margin="0,8,12,0" Name="npcAdd" VerticalAlignment="Top" Width="98.61" Grid.Column="2" Click="npcAdd_Click">Add NPC</Button>
+        </Grid>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,27.6,24.157" Name="SaveButton" VerticalAlignment="Bottom" Width="75" Grid.Column="1" Click="button4_Click">Save</Button>
+        <CheckBox Height="16" Margin="97.525,274.89,0,0" Name="subLocation" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="119.435">SubLocations?</CheckBox>
+        <TextBox Grid.Column="1" Height="25" Margin="96.885,180.761,0,0" Name="typeBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="369.078">Main Story</TextBox>
+        <TextBox Grid.Column="1" Height="25" Margin="96.552,244.069,0,0" Name="mainLocationsBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="264.236" />
+        <Button Click="button2_Click" Grid.Column="1" Height="23" Margin="367.353,246.568,0,0" Name="button3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="98.61">Add Location</Button>
+        <Label Grid.ColumnSpan="2" Height="25" HorizontalAlignment="Left" Margin="12,181.594,0,0" Name="label3" VerticalAlignment="Top" Width="104.958">Type:</Label>
+        <Label Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="12.495,294.882,0,0" Name="label4" Width="105.791" Height="25" VerticalAlignment="Top">Sub Locations:</Label>
+        <TextBox Margin="97.719,294.882,0,0" Name="subLocationBox" Grid.Column="1" HorizontalAlignment="Left" Width="263.95" Height="25" VerticalAlignment="Top" />
+        <Button Margin="367.353,295.715,0,0" Name="button2" Grid.Column="1" Height="23" VerticalAlignment="Top" Click="button2_Click_1" HorizontalAlignment="Left" Width="98.61">Add Sublocation</Button>
+        <ListBox HorizontalAlignment="Right" Margin="0,234.073,232.745,0" Name="MainLocationListBox" Width="194.922" Grid.Column="1" Height="99.127" VerticalAlignment="Top" />
+        <ListBox HorizontalAlignment="Right" Margin="0,234.073,12,0" Name="SublocationListBox" Width="194.089" Grid.Column="1" Height="99.127" VerticalAlignment="Top" />
+        <Label Height="25" HorizontalAlignment="Right" Margin="0,212.415,232.745,0" Name="label5" VerticalAlignment="Top" Width="194.922" Grid.Column="1">Main Locations</Label>
+        <Label Height="25" HorizontalAlignment="Right" Margin="0,212.415,12,0" Name="label6" VerticalAlignment="Top" Width="193.751" Grid.Column="1">Sublocations</Label>
+        <Button Grid.ColumnSpan="2" Height="23" HorizontalAlignment="Left" Margin="12.495,333.2,0,0" Name="UpdateText" VerticalAlignment="Top" Width="125.783" Click="UpdateText_Click">Update Text</Button>
+        <Button Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="391,334,0,0" Click="ClearText_Click"/>
+    </Grid>
+</Window>
