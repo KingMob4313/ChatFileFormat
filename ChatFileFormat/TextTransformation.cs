@@ -8,6 +8,8 @@ namespace WpfApplication1
 {
     class TextTranformation
     {
+        //TODO: This needs to be moved to a strategy pattern, or at the very least a case statement
+        //Also, this needs to be checking for 'start of line' using regex
         public static string PersonReplace(string output)
         {
             

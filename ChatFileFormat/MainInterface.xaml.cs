@@ -112,7 +112,7 @@ namespace WpfApplication1
                     }
 
                     
-                    //Method Call
+                    //Method Call.
                     tempString = TextTranformation.PersonReplace(tempString);
 
                     if (tempString.Trim() != string.Empty)
