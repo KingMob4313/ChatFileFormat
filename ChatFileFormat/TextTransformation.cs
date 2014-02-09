@@ -12,51 +12,68 @@ namespace WpfApplication1
         //Also, this needs to be checking for 'start of line' using regex
         public static string PersonReplace(string output)
         {
-            
-            
+            string x;
             if (output != string.Empty)
             {
-                if (!(TempStorage.enteredNameOne == string.Empty || TempStorage.enteredNameOne == null))
+                
+                if (!string.IsNullOrEmpty(TempStorage.enteredNameOne))
                 {
+                    
                     if (TempStorage.storyTellerCheckOne == false)
                     {
-                        output = output.Replace(("^" + TempStorage.enteredNameOne), TempStorage.enteredNameOne.ToString() + ":  ##110481| ");
+                        x = ("^" + TempStorage.enteredNameOne);
+                        string xyz = RegexStuffer(x, output, (TempStorage.enteredNameOne.ToString() + ":  ##110481| "));
+                        output = xyz;
                     }
                     else
                     {
-                        output = output.Replace(("^" + TempStorage.enteredNameOne), TempStorage.enteredNameOne.ToString() + ":  ##110481| ");
+                        x = ("^" + TempStorage.enteredNameOne);
+                        string xyz = RegexStuffer(x, output, (TempStorage.enteredNameOne.ToString() + ":  ##110481| "));
+                        output = xyz;
                     }
                 }
 
-                if (!(TempStorage.enteredNameTwo == string.Empty || TempStorage.enteredNameTwo == null))
+                if (!string.IsNullOrEmpty(TempStorage.enteredNameTwo))
                 {
                     if (TempStorage.storyTellerCheckTwo == false)
                     {
-                        output = output.Replace("^" + TempStorage.enteredNameTwo, TempStorage.enteredNameTwo.ToString() + ":  ##666666| ");
+                        x = ("^" + TempStorage.enteredNameTwo);
+                        string xyz = RegexStuffer(x, output, (TempStorage.enteredNameTwo.ToString() + ":  ##666666| "));
+                        output = xyz;
                     }
                     else
                     {
-                        output = output.Replace("^" + TempStorage.enteredNameTwo.ToString(), TempStorage.enteredNameTwo.ToString() + ":  ##666666| ");
+                        x = ("^" + TempStorage.enteredNameTwo);
+                        string xyz = RegexStuffer(x, output, (TempStorage.enteredNameTwo.ToString() + ":  ##666666| "));
+                        output = xyz;
                     }
                 }
 
-                if (!(TempStorage.enteredNameThree == string.Empty || TempStorage.enteredNameThree == null))
+
+
+                if (!string.IsNullOrEmpty(TempStorage.enteredNameThree))
                 {
                     if (TempStorage.storyTellerCheckThree == false)
                     {
-                        output = output.Replace("^" + TempStorage.enteredNameThree.ToString(), TempStorage.enteredNameThree.ToString() + ":  ##800000| ");
+                        x = ("^" + TempStorage.enteredNameThree);
+                        string xyz = RegexStuffer(x, output, (TempStorage.enteredNameThree.ToString() + ":  ##800000| "));
+                        output = xyz;
                     }
                     else
                     {
-                        output = output.Replace("^" + TempStorage.enteredNameThree, TempStorage.enteredNameThree.ToString() + ":  ##800000| ");
+                        x = ("^" + TempStorage.enteredNameThree);
+                        string xyz = RegexStuffer(x, output, (TempStorage.enteredNameThree.ToString() + ":  ##800000| "));
+                        output = xyz;
                     }
                 }
 
-                if (!(TempStorage.enteredNameFour == string.Empty || TempStorage.enteredNameFour == null))
+                if (!string.IsNullOrEmpty(TempStorage.enteredNameFour))
                 {
                     if (TempStorage.storyTellerCheckFour == false)
                     {
-                        output = output.Replace((("^" + TempStorage.enteredNameFour)), TempStorage.enteredNameFour.ToString() + ":  ##208020| ");
+                        x = ("^" + TempStorage.enteredNameFour);
+                        string xyz = RegexStuffer(x, output, (TempStorage.enteredNameFour.ToString() + ":  ##208020| "));
+                        output = xyz;
                     }
                     else
                     {
@@ -67,6 +84,13 @@ namespace WpfApplication1
                 
             }
             return output;
+        }
+
+        private static string RegexStuffer(string zzz, string aaa, string bbb)
+        {
+            Regex y = new Regex(zzz);
+            aaa = y.Replace(aaa, bbb);
+            return aaa;
         }
     }
 }
